@@ -20,7 +20,7 @@ The core interfaces are
 
 
 ```C#
-    public class StaticReflection
+    public class FunWithStaticReflection
     {
         private int _id = 0;
         
