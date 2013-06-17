@@ -18,7 +18,7 @@ namespace StaticReflection
             }
             if (info is PropertyInfo)
             {
-                return new PropertyInfoDeafMember(info as PropertyInfo);
+                return new PropertyInfoGetSetMember(info as PropertyInfo);
             }
             if (info is MethodInfo)
             {

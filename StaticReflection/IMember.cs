@@ -1,4 +1,6 @@
-﻿namespace StaticReflection
+﻿using System.Reflection;
+
+namespace StaticReflection
 {
     using System;
     using System.Collections.Generic;
@@ -39,5 +41,10 @@
         /// <param name="tattribute">The type of attribute</param>
         /// <returns>An instance of <paramref name="tattribute"/> applied to this member. If none are applied, returns null</returns>
         Attribute GetCustomAttribute(Type tattribute);
+
+        /// <summary>
+        /// The underlying <see cref="System.Reflection.MemberInfo"/>
+        /// </summary>
+        MemberInfo MemberInfo { get; }
     }
 }

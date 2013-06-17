@@ -41,5 +41,11 @@
         }
 
         public abstract Type MemberType { get; }
+
+
+        public MemberInfo MemberInfo
+        {
+            get { return _memberInfo; }
+        }
     }
 }
