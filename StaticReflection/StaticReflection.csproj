@@ -39,10 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArgumentEvaluatorExpressionVisitor.cs" />
+    <Compile Include="ExpressionEvaluator.cs" />
     <Compile Include="Extensions\ReflectionExtensions.cs" />
     <Compile Include="FieldInfoDeafMember.cs" />
     <Compile Include="ICallableMember.cs" />
-    <Compile Include="IDeafMember.cs" />
+    <Compile Include="IGetSetMember.cs" />
     <Compile Include="IMember.cs" />
     <Compile Include="MemberFactory.cs" />
     <Compile Include="MethodInfoInvocableMember.cs" />

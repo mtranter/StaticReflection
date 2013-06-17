@@ -21,7 +21,7 @@
         {
             var member = this.GetMember(() => this._testField);
             Assert.AreEqual(member.Name, "_testField");
-            Assert.IsTrue(member is IDeafMember);
+            Assert.IsTrue(member is IGetSetMember);
         }
 
         [TestMethod]
@@ -29,7 +29,7 @@
         {
             var member = this.GetMember(() => this.ProtectedProperty);
             Assert.AreEqual(member.Name, "ProtectedProperty");
-            Assert.IsTrue(member is IDeafMember);
+            Assert.IsTrue(member is IGetSetMember);
         }
 
         [TestMethod]
@@ -43,7 +43,7 @@
         [TestMethod]
         public void canGetFieldValue()
         {
-            var member = this.GetMember(() => this._testField) as IDeafMember;
+            var member = this.GetMember(() => this._testField) as IGetSetMember;
             Assert.IsNotNull(member);
             _testField = 42;
             var value = member.GetValue(this);
@@ -53,7 +53,7 @@
         [TestMethod]
         public void canSetFieldValue()
         {
-            var member = this.GetMember(() => this._testField) as IDeafMember;
+            var member = this.GetMember(() => this._testField) as IGetSetMember;
             Assert.IsNotNull(member);
             _testField = 1;
             member.SetValue(this, 42);
@@ -63,7 +63,7 @@
         [TestMethod]
         public void canGetPropertyValue()
         {
-            var member = this.GetMember(() => this.ProtectedProperty) as IDeafMember;
+            var member = this.GetMember(() => this.ProtectedProperty) as IGetSetMember;
             Assert.IsNotNull(member);
             ProtectedProperty = 42;
             var value = member.GetValue(this);
@@ -74,7 +74,7 @@
         [TestMethod]
         public void canSetPropertyValue()
         {
-            var member = this.GetMember(() => this.ProtectedProperty) as IDeafMember;
+            var member = this.GetMember(() => this.ProtectedProperty) as IGetSetMember;
             Assert.IsNotNull(member);
             ProtectedProperty = 42;
             var value = member.GetValue(this);

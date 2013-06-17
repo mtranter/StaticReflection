@@ -23,7 +23,7 @@ namespace StaticReflection.Tests
         {
             var member = StaticReflection.GetMember(() => this._testField);
             Assert.AreEqual(member.Name, "_testField");
-            Assert.IsTrue(member is IDeafMember);
+            Assert.IsTrue(member is IGetSetMember);
         }
 
         [TestMethod]
@@ -31,7 +31,7 @@ namespace StaticReflection.Tests
         {
             var member = StaticReflection.GetMember(() => this.ProtectedProperty);
             Assert.AreEqual(member.Name, "ProtectedProperty");
-            Assert.IsTrue(member is IDeafMember);
+            Assert.IsTrue(member is IGetSetMember);
         }
 
         [TestMethod]
@@ -45,7 +45,7 @@ namespace StaticReflection.Tests
         [TestMethod]
         public void canGetFieldValue()
         {
-            var member = StaticReflection.GetMember(() => this._testField) as IDeafMember;
+            var member = StaticReflection.GetMember(() => this._testField) as IGetSetMember;
             Assert.IsNotNull(member);
             _testField = 42;
             var value = member.GetValue(this);
@@ -55,7 +55,7 @@ namespace StaticReflection.Tests
         [TestMethod]
         public void canSetFieldValue()
         {
-            var member = StaticReflection.GetMember(() => this._testField) as IDeafMember;
+            var member = StaticReflection.GetMember(() => this._testField) as IGetSetMember;
             Assert.IsNotNull(member);
             _testField = 1;
             member.SetValue(this, 42);
@@ -65,7 +65,7 @@ namespace StaticReflection.Tests
         [TestMethod]
         public void canGetPropertyValue()
         {
-            var member = StaticReflection.GetMember(() => this.ProtectedProperty) as IDeafMember;
+            var member = StaticReflection.GetMember(() => this.ProtectedProperty) as IGetSetMember;
             Assert.IsNotNull(member);
             ProtectedProperty = 42;
             var value = member.GetValue(this);
@@ -76,7 +76,7 @@ namespace StaticReflection.Tests
         [TestMethod]
         public void canSetPropertyValue()
         {
-            var member = StaticReflection.GetMember(() => this.ProtectedProperty) as IDeafMember;
+            var member = StaticReflection.GetMember(() => this.ProtectedProperty) as IGetSetMember;
             Assert.IsNotNull(member);
             ProtectedProperty = 42;
             var value = member.GetValue(this);

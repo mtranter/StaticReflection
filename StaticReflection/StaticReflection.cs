@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace StaticReflection
 {
     using System;
@@ -31,6 +33,7 @@ namespace StaticReflection
             if (body is MethodCallExpression)
             {
                 var methodCall = body as MethodCallExpression;
+                
                 if (methodCall.Type == typeof(Delegate) && methodCall.Object is ConstantExpression)
                 {
                     return new MethodInfoInvocableMember((MethodInfo) ((ConstantExpression) methodCall.Object).Value);

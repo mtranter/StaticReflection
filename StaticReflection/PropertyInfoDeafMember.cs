@@ -3,7 +3,7 @@
     using System;
     using System.Reflection;
 
-    public class PropertyInfoDeafMember : ReflectedMember,  IDeafMember
+    public class PropertyInfoDeafMember : ReflectedMember,  IGetSetMember
     {
         private readonly PropertyInfo _propertyInfo;
 

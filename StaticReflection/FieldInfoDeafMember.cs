@@ -3,11 +3,11 @@
     using System;
     using System.Reflection;
 
-    public class FieldInfoDeafMember : ReflectedMember, IDeafMember
+    public class FieldInfoGetSetMember : ReflectedMember, IGetSetMember
     {
         private readonly FieldInfo _fieldInfo;
 
-        public FieldInfoDeafMember(FieldInfo fieldInfo)
+        public FieldInfoGetSetMember(FieldInfo fieldInfo)
             : base(fieldInfo)
         {
             _fieldInfo = fieldInfo;
@@ -18,7 +18,7 @@
             get { return _fieldInfo.FieldType; }
         }
 
-        #region IDeafMember Members
+        #region IGetSetMember Members
 
         public bool IsReadonly
         {

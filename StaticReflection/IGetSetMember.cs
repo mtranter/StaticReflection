@@ -1,6 +1,6 @@
 ﻿namespace StaticReflection
 {
-    public interface IDeafMember : IMember
+    public interface IGetSetMember : IMember
     {
 
         bool IsReadonly { get; }

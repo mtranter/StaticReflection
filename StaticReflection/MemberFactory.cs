@@ -14,7 +14,7 @@ namespace StaticReflection
         {
             if (info is FieldInfo)
             {
-                return new FieldInfoDeafMember(info as FieldInfo);
+                return new FieldInfoGetSetMember(info as FieldInfo);
             }
             if (info is PropertyInfo)
             {

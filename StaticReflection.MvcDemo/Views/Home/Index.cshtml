@@ -1,0 +1,9 @@
+﻿@using StaticReflection.MvcDemo.Controllers
+@model StaticReflection.MvcDemo.Models.IndexModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@(Html.ActionLinkFor<HomeController>(c => c.Detail(1, Model.GetMyBirthday(true))))
