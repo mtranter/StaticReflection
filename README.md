@@ -9,9 +9,9 @@ This is my version of the Lambda Expression approach to reflection.
 It uses Lambda Expressions to access member information at runtime.
 
 The core interfaces are 
-* ``` IMemeber ``` the base interface that represents a type Member,
-* ``` IGetSetMember ``` that abstract fields and property types, and
-* ``` ICallableMember ```for Method member types
+* ``` IMemeber ``` the base interface that represents a type member,
+* ``` IGetSetMember ``` abstracts fields and property types, and
+* ``` ICallableMember ``` represents Method member types
 
 <dl>
     <dt>Basic Usage</dt>
