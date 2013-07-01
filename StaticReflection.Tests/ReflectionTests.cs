@@ -92,5 +92,13 @@ namespace StaticReflection.Tests
             var val = (int) member.Invoke(this, new object[]{ DateTime.Now, 1, 2});
             Assert.AreEqual(val, 42);
         }
+
+        [TestMethod]
+        public void canReflectOn()
+        {
+            var member = ReflectOn<ReflectionTests>.Member(t => t.ProtectedProperty);
+            Assert.IsNotNull(member);
+            Assert.AreEqual(member.Name, "ProtectedProperty");
+        }
     }
 }
