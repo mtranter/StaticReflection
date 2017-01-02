@@ -55,3 +55,15 @@ The core interfaces are
         }
     }
 ```
+
+Usage
+------
+
+This library can be found on [Nuget](https://www.nuget.org/packages/ExpressionReflection/) under the name ExpressionReflection
+
+This library is build on AppVeyor (link soon)
+
+License
+--------
+
+This library is licensed under MIT License. See LICENSE.txt
