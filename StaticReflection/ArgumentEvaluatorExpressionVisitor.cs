@@ -1,15 +1,12 @@
 ﻿
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace StaticReflection
-{
-
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Linq.Expressions;
-
+{    
     public class ArgumentEvaluatorExpressionVisitor : ExpressionVisitor
-    {
-        private int _depth = 0;
+    {        
         private readonly List<object> _values = new List<object>();
 
         protected override Expression VisitMethodCall(MethodCallExpression node)
