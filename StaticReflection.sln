@@ -1,11 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.26014.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticReflection", "StaticReflection\StaticReflection.csproj", "{C36A32AB-C1D4-4E93-A2C3-F3019A12FDAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticReflection.Tests", "StaticReflection.Tests\StaticReflection.Tests.csproj", "{C0BBD670-FD28-400C-A39C-BE9BA16B04EC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticReflection.Mvc", "StaticReflection.Mvc\StaticReflection.Mvc.csproj", "{DFF6FEF8-CFA3-4D0C-94B2-470C280392C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{F3EF18AD-0D7A-4C56-B350-11D42643F335}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		ExpressionReflection.nuspec = ExpressionReflection.nuspec
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
