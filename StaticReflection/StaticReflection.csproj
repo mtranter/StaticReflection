@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Title>ExpressionReflection</Title>
-    <Description>Lambda expression based Reflection library"</Description>
+    <Description>Lambda expression based Reflection library</Description>
     <Company>Mark Tranter</Company>
     <Product>ExpressionReflection</Product>
     <Copyright>Copyright ©  2013</Copyright>
